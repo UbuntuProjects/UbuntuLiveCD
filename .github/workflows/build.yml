@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build-jammy:
     # The type of runner that the job will run on
-    runs-on: ["self-hosted", "Ubuntu", "22.04"]
+    runs-on: ["self-hosted", "22.04"]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
