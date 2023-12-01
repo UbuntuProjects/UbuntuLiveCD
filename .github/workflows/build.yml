@@ -28,7 +28,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build
         run: |
-          sudo apt-get install debootstrap
+          apt-get install debootstrap
           mkdir -p work/chroot
           cd work
           debootstrap --arch=amd64 jammy chroot
