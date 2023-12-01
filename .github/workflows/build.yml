@@ -31,12 +31,12 @@ jobs:
           sudo apt-get install debootstrap
           mkdir -p work/chroot
           cd work
-          sudo debootstrap --arch=amd64 jammy chroot
-          sudo mount --bind /dev chroot/dev
-          sudo cp /etc/hosts chroot/etc/hosts
-          sudo cp /etc/resolv.conf chroot/etc/resolv.conf
-          sudo cp /etc/apt/sources.list chroot/etc/apt/sources.list
-          sudo chroot chroot
+          debootstrap --arch=amd64 jammy chroot
+          mount --bind /dev chroot/dev
+          cp /etc/hosts chroot/etc/hosts
+          cp /etc/resolv.conf chroot/etc/resolv.conf
+          cp /etc/apt/sources.list chroot/etc/apt/sources.list
+          chroot chroot
           mount none -t proc /proc
           mount none -t sysfs /sys
           mount none -t devpts /dev/pts
